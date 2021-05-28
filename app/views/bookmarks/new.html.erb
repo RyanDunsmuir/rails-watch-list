@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div class="create-bookmark-box">
+    <h1>Add New Movie to <%= @list.name %></h1>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit class: "btn btn-primary"%>
+    <% end %>
+    <%= link_to 'Cancel', lists_path, class: "btn btn-danger form-back-2" %>
+  </div>
+</div>

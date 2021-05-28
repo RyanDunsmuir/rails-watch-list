@@ -1,0 +1,26 @@
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1599957015834-02d074874b82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);">
+  <div class="container">
+    <h1>My Middle Earth Movies</h1>
+    <p>The biggest hits and failures from Middle Earth.</p>
+    <a class="btn btn-success" href="/lists">View My Lists</a>
+  </div>
+</div>
+<div class="container">
+  <div class="d-flex align-items-center justify-content-between mb-3 mt-3">
+    <h2 class="mb-0">All Movies</h2>
+  </div>
+  <div class="cards mb-5">
+    <% @movies.each do |movie| %>
+      <div class="card-trip">
+        <%= image_tag movie.poster_url %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= movie.title %></h2>
+            <p><%= movie.overview %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= movie.rating %></h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

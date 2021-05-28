@@ -1,0 +1,38 @@
+<!-- Begin page content -->
+<!-- <div class="cover-banner">
+
+<div class="main-box">
+  <h1>My Lists</h1>
+  <p class="lead">Here are your lists</p>
+</div>
+
+<ul>
+  <% @lists.each do |list| %>
+  <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+</div>
+ -->
+
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1599957015834-02d074874b82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);">
+  <div class="container">
+    <h1>My Middle Earth Movie Lists</h1>
+    <p>Change your life and learn to save amazing middle earth blockbuster hits to handy lists.</p>
+    <a class="btn btn-success" href="/lists/new">Create New List</a>
+  </div>
+</div>
+<div class="container">
+  <div class="d-flex align-items-center justify-content-between mb-3 mt-3">
+    <h2 class="mb-0">My Lists</h2>
+    <a class="btn btn-primary" href="/lists/new">Create A Movie List</a>
+  </div>
+  <div class="cards mb-5">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1584213062606-7a1fc728727d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80)">
+          <%= list.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
